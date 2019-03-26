@@ -24,6 +24,11 @@ namespace assignment_2
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             try
             {
                 double SR1 = double.Parse(textBox1.Text);
@@ -34,6 +39,26 @@ namespace assignment_2
 
             }
             catch
+            {
+                MessageBox.Show("Invalid Input");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double PR1 = double.Parse(textBox3.Text);
+                double PR2 = double.Parse(textBox4.Text);
+
+                double TR = 1/PR1 + 1/PR2;
+                MessageBox.Show("total resistance = " + TR.ToString("0.00") + "cm");
+
+            }
+            catch
+            {
+                MessageBox.Show("Invalid Input");
+            }
         }
     }
 }
